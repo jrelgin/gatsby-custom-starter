@@ -1,3 +1,9 @@
+const precss = require('precss');
+const autoprefixer = require('autoprefixer');
+const postcssImports = require('postcss-import');
+const postcssUrl = require('postcss-url');
+const postCSSNodeSass = require('postcss-node-sass');
+
 module.exports = {
   siteMetadata: {
     title: `signal lantern`,
@@ -12,6 +18,18 @@ module.exports = {
     },
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-postcss`,
+      options: {
+        postCssPlugins: [
+          postcssImports(),
+          precss(),
+          autoprefixer(),
+          postcssUrl(),
+          postCSSNodeSass(),
+        ],
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -74,4 +92,4 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
-}
+};
