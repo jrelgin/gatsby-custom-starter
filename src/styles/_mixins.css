@@ -1,0 +1,41 @@
+/*  576px  35.4375rem */
+@mixin screen-sm {
+  @media (min-width: #{$screen-sm-min}) {
+    @content;
+  }
+}
+
+/* 768px 48rem */
+@mixin screen-md {
+  @media (min-width: #{$screen-md-min}) {
+    @content;
+  }
+}
+
+/* 1024px 64rem */
+@mixin screen-lg {
+  @media (min-width: #{$screen-lg-min}) {
+    @content;
+  }
+}
+
+/* 1200px 75rem */
+@mixin screen-xl {
+  @media (min-width: #{$screen-xl-min}) {
+    @content;
+  }
+}
+
+/* 1440px 90rem */
+@mixin screen-xxl {
+  @media (min-width: #{$screen-xxl-min}) {
+    @content;
+  }
+}
+
+/* Custom size */
+@mixin screen-custom($screen) {
+  @media (min-width: $screen+'px') {
+    @content;
+  }
+}

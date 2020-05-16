@@ -1,0 +1,29 @@
+@import '_fonts.css';
+@import '_normalize.css';
+@import '_variables.css';
+@import '_mixins.css';
+@import '_type.css';
+@import '_helpers.css';
+
+html {
+  height: 100%;
+}
+
+body,
+.___gatsby {
+  min-height: 100%;
+}
+
+body {
+  font-family: $whitney;
+  margin: 0;
+  padding: 0;
+}
+
+img,
+svg {
+  max-width: 100%;
+}
+
+* {
+}
